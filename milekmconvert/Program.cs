@@ -11,7 +11,7 @@ class Program
             Console.Write("Podaj liczbę do przeliczenia z km na mile lub z mili na km: ");
             string xs = Console.ReadLine();
 
-            decimal x = decimal.Parse(xs);
+            int x = int.Parse(xs);
 
             bool subRun = true;
             while (subRun)
@@ -25,9 +25,11 @@ class Program
                 {
                     case "1":
                         //to do
+                        MtoKm(x);
                         break;
                     case "2":
                         //to do
+                        KMtoM(x);
                         break;
                     default:
                         Console.WriteLine("Niepoprawna opcja. Wybierz ponownie.");
@@ -57,5 +59,18 @@ class Program
         }
 
         Console.WriteLine("Program zakończony.");
+    }
+    
+    private static void MtoKm(int x)
+    {
+        // 1 mila = 1,609344 kilometra
+        decimal mkm = x * 1,609344;
+        Console.WriteLine($"{x} mili to {mkm} kilometrów.");
+    }
+    private static void KMtoM(int x)
+    {
+        // 1 kilometr to 0,621371192 mili
+        decimal kmm = x * 0,621371192;
+        Console.WriteLine($"{x} kilometrów to {kmm} mili.");
     }
 }
