@@ -64,13 +64,13 @@ class Program
     private static void MtoKm(int x)
     {
         // 1 mila = 1,609344 kilometra
-        decimal mkm = x * 1,609344;
+        double mkm = x * 1.609344;
         Console.WriteLine($"{x} mili to {mkm} kilometrów.");
     }
     private static void KMtoM(int x)
     {
         // 1 kilometr to 0,621371192 mili
-        decimal kmm = x * 0,621371192;
+        double kmm = x * 0.621371192;
         Console.WriteLine($"{x} kilometrów to {kmm} mili.");
     }
 }
