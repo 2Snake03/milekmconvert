@@ -24,11 +24,9 @@ class Program
                 switch (opt)
                 {
                     case "1":
-                        //to do
                         MtoKm(x);
                         break;
                     case "2":
-                        //to do
                         KMtoM(x);
                         break;
                     default:
